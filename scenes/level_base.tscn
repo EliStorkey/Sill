@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bx5xxgjktyrfa" path="res://assets/Corner-tile-sheet.png" id="2_8rhjg"]
 [ext_resource type="Texture2D" uid="uid://7bm7xk0peuhp" path="res://assets/plant game wall tile corner.png" id="3_krm4r"]
 [ext_resource type="Texture2D" uid="uid://dk6mkqcjhtlw8" path="res://assets/tilesheet.png" id="4_8n3nq"]
-[ext_resource type="Script" uid="uid://c3irm844ep0t8" path="res://scenes/placement_manager.gd" id="5_8rhjg"]
+[ext_resource type="Script" uid="uid://c3irm844ep0t8" path="res://scripts/placement_manager.gd" id="5_8rhjg"]
 [ext_resource type="PackedScene" uid="uid://cvg7kv42a1y3f" path="res://scenes/pot_base.tscn" id="6_krm4r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_krm4r"]
