@@ -1,0 +1,13 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+*.translation
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Exported games (if you build them to a folder named 'build' or 'exports')
+exports/
+build/
+
