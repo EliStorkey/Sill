@@ -395,6 +395,8 @@ offset_bottom = 91.0
 icon = SubResource("AtlasTexture_rth7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1935770522]
+z_index = -10
+position = Vector2(0, -42)
 texture = ExtResource("12_vm68j")
 
 [connection signal="pressed" from="Spider Plant" to="PlacementManager" method="select_plant" binds= [0]]
