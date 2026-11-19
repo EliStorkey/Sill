@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://dhmpywj7y2cf" path="res://resources/spider_plant.tres" id="5_qurbw"]
 [ext_resource type="PackedScene" uid="uid://cvg7kv42a1y3f" path="res://scenes/pot_base.tscn" id="6_krm4r"]
 [ext_resource type="Resource" uid="uid://icxvdn6r2bg5" path="res://resources/aloe_vera.tres" id="7_vm68j"]
+[ext_resource type="Texture2D" uid="uid://srej2lmfo01" path="res://assets/background.png" id="12_vm68j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vm68j"]
 atlas = ExtResource("1_qurbw")
@@ -341,6 +342,7 @@ atlas = ExtResource("1_qurbw")
 region = Rect2(36, 6, 18, 18)
 
 [node name="LevelBase" type="Node2D" unique_id=1129242816]
+y_sort_enabled = true
 
 [node name="Spider Plant" type="Button" parent="." unique_id=1596327348]
 offset_left = -43.0
@@ -352,6 +354,7 @@ icon_alignment = 1
 
 [node name="PlacementManager" type="Node2D" parent="." unique_id=1245668658 node_paths=PackedStringArray("floor_layer", "camera")]
 z_index = 1
+y_sort_enabled = true
 script = ExtResource("5_8rhjg")
 floor_layer = NodePath("../FloorLayer")
 pot_scene = ExtResource("6_krm4r")
@@ -391,6 +394,9 @@ offset_right = 13.0
 offset_bottom = 91.0
 icon = SubResource("AtlasTexture_rth7s")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1935770522]
+texture = ExtResource("12_vm68j")
+
 [connection signal="pressed" from="Spider Plant" to="PlacementManager" method="select_plant" binds= [0]]
-[connection signal="pressed" from="Aloe Vera" to="PlacementManager" method="select_plant"]
+[connection signal="pressed" from="Aloe Vera" to="PlacementManager" method="select_plant" binds= [2]]
 [connection signal="pressed" from="English Ivy" to="PlacementManager" method="select_plant" binds= [1]]
