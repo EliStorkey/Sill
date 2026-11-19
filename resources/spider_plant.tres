@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://dhmpywj7y2cf"]
+
+[ext_resource type="Script" uid="uid://x4blqaw5p1or" path="res://scripts/PlantData.gd" id="1_xrpq8"]
+[ext_resource type="Texture2D" uid="uid://bbo8qv4m2ylcy" path="res://assets/plantssheet.png" id="2_1j6dr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3puys"]
+atlas = ExtResource("2_1j6dr")
+region = Rect2(0, 0, 18, 24)
+
+[resource]
+script = ExtResource("1_xrpq8")
+preferred_moisture = 1
+is_pet_friendly = true
+sprite = SubResource("AtlasTexture_3puys")
+metadata/_custom_type_script = "uid://x4blqaw5p1or"

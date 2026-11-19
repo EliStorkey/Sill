@@ -1,12 +1,20 @@
 [gd_scene format=4 uid="uid://djrglouxlf4e6"]
 
-[ext_resource type="Texture2D" uid="uid://cl3k7xoujcdrm" path="res://assets/pot.png" id="1_8n3nq"]
 [ext_resource type="Texture2D" uid="uid://dolv1otf6q5im" path="res://assets/wall-tileset.png" id="1_58o6h"]
+[ext_resource type="Texture2D" uid="uid://bbo8qv4m2ylcy" path="res://assets/plantssheet.png" id="1_qurbw"]
 [ext_resource type="Texture2D" uid="uid://bx5xxgjktyrfa" path="res://assets/Corner-tile-sheet.png" id="2_8rhjg"]
 [ext_resource type="Texture2D" uid="uid://7bm7xk0peuhp" path="res://assets/plant game wall tile corner.png" id="3_krm4r"]
+[ext_resource type="Script" uid="uid://x4blqaw5p1or" path="res://scripts/PlantData.gd" id="4_6k8qy"]
 [ext_resource type="Texture2D" uid="uid://dk6mkqcjhtlw8" path="res://assets/tilesheet.png" id="4_8n3nq"]
 [ext_resource type="Script" uid="uid://c3irm844ep0t8" path="res://scripts/placement_manager.gd" id="5_8rhjg"]
+[ext_resource type="Resource" uid="uid://b2la5fbflokfo" path="res://resources/english_ivy.tres" id="5_evabm"]
+[ext_resource type="Resource" uid="uid://dhmpywj7y2cf" path="res://resources/spider_plant.tres" id="5_qurbw"]
 [ext_resource type="PackedScene" uid="uid://cvg7kv42a1y3f" path="res://scenes/pot_base.tscn" id="6_krm4r"]
+[ext_resource type="Resource" uid="uid://icxvdn6r2bg5" path="res://resources/aloe_vera.tres" id="7_vm68j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm68j"]
+atlas = ExtResource("1_qurbw")
+region = Rect2(0, 6, 18, 18)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_krm4r"]
 texture = ExtResource("1_58o6h")
@@ -324,14 +332,22 @@ terrain_set_0/terrain_0/color = Color(0.5366907, 0.33062118, 0.14844757, 1)
 sources/1 = SubResource("TileSetAtlasSource_rth7s")
 sources/0 = SubResource("TileSetAtlasSource_vm68j")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qurbw"]
+atlas = ExtResource("1_qurbw")
+region = Rect2(18, 6, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rth7s"]
+atlas = ExtResource("1_qurbw")
+region = Rect2(36, 6, 18, 18)
+
 [node name="LevelBase" type="Node2D" unique_id=1129242816]
 
-[node name="Button" type="Button" parent="." unique_id=1596327348]
-offset_left = -11.0
-offset_top = 64.5
-offset_right = 11.0
-offset_bottom = 86.5
-icon = ExtResource("1_8n3nq")
+[node name="Spider Plant" type="Button" parent="." unique_id=1596327348]
+offset_left = -43.0
+offset_top = 65.0
+offset_right = -17.0
+offset_bottom = 91.0
+icon = SubResource("AtlasTexture_vm68j")
 icon_alignment = 1
 
 [node name="PlacementManager" type="Node2D" parent="." unique_id=1245668658 node_paths=PackedStringArray("floor_layer", "camera")]
@@ -340,9 +356,10 @@ script = ExtResource("5_8rhjg")
 floor_layer = NodePath("../FloorLayer")
 pot_scene = ExtResource("6_krm4r")
 camera = NodePath("../Camera2D")
+available_plants = Array[ExtResource("4_6k8qy")]([ExtResource("5_qurbw"), ExtResource("5_evabm"), ExtResource("7_vm68j")])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=727180336]
-offset = Vector2(0, -18)
+offset = Vector2(0, -26)
 
 [node name="WallLayer" type="TileMapLayer" parent="." unique_id=2081068752]
 z_index = -1
@@ -360,4 +377,20 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAAAAQAAAAOAAAAAAAAAAMAAAAPAAAAAAAAAAIAAAAPAAAAAAAAAAEAAAAPAAAAAAAAAAAAAAAPAAAAAAAAAP//AAAPAAAAAAAAAP7/AAAPAAAAAAAAAP3/AAAPAAAAAAAAAPz/AAAMAAAAAAD//wQAAAAOAAAAAAD//wMAAAAPAAAAAAD//wIAAAAPAAAAAAD//wEAAAAPAAAAAAD//wAAAAAPAAAAAAD/////AAAPAAAAAAD///7/AAAPAAAAAAD///3/AAAPAAAAAAD///z/AAAMAAAAAAD+/wQAAAAOAAAAAAD+/wMAAAAPAAAAAAD+/wIAAAAPAAAAAAD+/wEAAAAPAAAAAAD+/wAAAAAPAAAAAAD+////AAAPAAAAAAD+//7/AAAPAAAAAAD+//3/AAAPAAAAAAD+//z/AAAMAAAAAAADAAQAAAAKAAAAAAADAAMAAAANAAAAAAADAAIAAAANAAAAAAADAAEAAAANAAAAAAADAAAAAAANAAAAAAADAP//AAANAAAAAAADAP7/AAANAAAAAAADAP3/AAANAAAAAAADAPz/AAAJAAAAAAACAAQAAAAOAAAAAAACAAMAAAAPAAAAAAACAAIAAAAPAAAAAAACAAEAAAAPAAAAAAACAAAAAAAPAAAAAAACAP//AAAPAAAAAAACAP7/AAAPAAAAAAACAP3/AAAPAAAAAAACAPz/AAAMAAAAAAABAAQAAAAOAAAAAAABAAMAAAAPAAAAAAABAAIAAAAPAAAAAAABAAEAAAAPAAAAAAABAAAAAAAPAAAAAAABAP//AAAPAAAAAAABAP7/AAAPAAAAAAABAP3/AAAPAAAAAAABAPz/AAAMAAAAAAD9/wQAAAAOAAAAAAD9/wMAAAAPAAAAAAD9/wIAAAAPAAAAAAD9/wEAAAAPAAAAAAD9/wAAAAAPAAAAAAD9////AAAPAAAAAAD9//7/AAAPAAAAAAD9//3/AAAPAAAAAAD9//z/AAAMAAAAAAD8/wQAAAAOAAAAAAD8/wMAAAAPAAAAAAD8/wIAAAAPAAAAAAD8/wEAAAAPAAAAAAD8/wAAAAAPAAAAAAD8////AAAPAAAAAAD8//7/AAAPAAAAAAD8//3/AAAPAAAAAAD8//z/AAAMAAAAAAD7/wQAAAAHAAAAAAD7/wMAAAALAAAAAAD7/wIAAAALAAAAAAD7/wEAAAALAAAAAAD7/wAAAAALAAAAAAD7////AAALAAAAAAD7//7/AAALAAAAAAD7//3/AAALAAAAAAD7//z/AAAFAAAAAAA=")
 tile_set = SubResource("TileSet_ngfo8")
 
-[connection signal="pressed" from="Button" to="PlacementManager" method="_on_button_pressed"]
+[node name="Aloe Vera" type="Button" parent="." unique_id=709325717]
+offset_left = 17.0
+offset_top = 65.0
+offset_right = 43.0
+offset_bottom = 91.0
+icon = SubResource("AtlasTexture_qurbw")
+
+[node name="English Ivy" type="Button" parent="." unique_id=1611846648]
+offset_left = -13.0
+offset_top = 65.0
+offset_right = 13.0
+offset_bottom = 91.0
+icon = SubResource("AtlasTexture_rth7s")
+
+[connection signal="pressed" from="Spider Plant" to="PlacementManager" method="select_plant" binds= [0]]
+[connection signal="pressed" from="Aloe Vera" to="PlacementManager" method="select_plant"]
+[connection signal="pressed" from="English Ivy" to="PlacementManager" method="select_plant" binds= [1]]

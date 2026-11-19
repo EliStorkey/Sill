@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://icxvdn6r2bg5"]
+
+[ext_resource type="Script" uid="uid://x4blqaw5p1or" path="res://scripts/PlantData.gd" id="1_1cufl"]
+[ext_resource type="Texture2D" uid="uid://bbo8qv4m2ylcy" path="res://assets/plantssheet.png" id="2_3atw7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6tkx"]
+atlas = ExtResource("2_3atw7")
+region = Rect2(18, 0, 18, 24)
+
+[resource]
+script = ExtResource("1_1cufl")
+plant_name = "Aloe Vera"
+preferred_light = 2
+is_pet_friendly = true
+sprite = SubResource("AtlasTexture_n6tkx")
+metadata/_custom_type_script = "uid://x4blqaw5p1or"
