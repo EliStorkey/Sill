@@ -346,9 +346,9 @@ y_sort_enabled = true
 
 [node name="Spider Plant" type="Button" parent="." unique_id=1596327348]
 offset_left = -43.0
-offset_top = 65.0
+offset_top = 63.0
 offset_right = -17.0
-offset_bottom = 91.0
+offset_bottom = 89.0
 icon = SubResource("AtlasTexture_vm68j")
 icon_alignment = 1
 
@@ -382,16 +382,16 @@ tile_set = SubResource("TileSet_ngfo8")
 
 [node name="Aloe Vera" type="Button" parent="." unique_id=709325717]
 offset_left = 17.0
-offset_top = 65.0
+offset_top = 63.0
 offset_right = 43.0
-offset_bottom = 91.0
+offset_bottom = 89.0
 icon = SubResource("AtlasTexture_qurbw")
 
 [node name="English Ivy" type="Button" parent="." unique_id=1611846648]
 offset_left = -13.0
-offset_top = 65.0
+offset_top = 63.0
 offset_right = 13.0
-offset_bottom = 91.0
+offset_bottom = 89.0
 icon = SubResource("AtlasTexture_rth7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1935770522]

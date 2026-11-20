@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bbfvp7y0ctyon"]
+
+[ext_resource type="Script" uid="uid://b64qfqlf40jn4" path="res://scripts/custom_cursor.gd" id="1_x4uts"]
+[ext_resource type="Texture2D" uid="uid://b0givbsosxp74" path="res://assets/cursor.png" id="2_1q0v7"]
+
+[node name="Custom Cursor" type="CanvasLayer" unique_id=2068199296]
+layer = 100
+script = ExtResource("1_x4uts")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1094706459]
+texture = ExtResource("2_1q0v7")
+centered = false

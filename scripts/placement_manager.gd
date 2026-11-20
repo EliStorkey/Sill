@@ -75,7 +75,7 @@ func _process(_delta: float) -> void:
 		current_preview.global_position = snapped_pos
 		
 		if floor_layer.get_cell_source_id(grid_coords) != -1 and not placed_pots.has(grid_coords):
-			current_preview.modulate = Color(1.0, 1.0, 1.0, 0.75) 
+			current_preview.modulate = Color(1.0, 1.0, 1.0, 0.5) 
 		else:
 			current_preview.modulate = Color(0.2, 0.2, 0.2, 0.25)
 

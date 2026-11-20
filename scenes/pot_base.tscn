@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cvg7kv42a1y3f"]
 
 [ext_resource type="Texture2D" uid="uid://cl3k7xoujcdrm" path="res://assets/pot.png" id="1_i88jb"]
-[ext_resource type="Script" uid="uid://bx3gtl2gm8ad3" path="res://scenes/pot_base.gd" id="1_tyxdh"]
+[ext_resource type="Script" uid="uid://bx3gtl2gm8ad3" path="res://scripts/pot_base.gd" id="1_tyxdh"]
 
 [node name="PotBase" type="Node2D" unique_id=1112434452]
 script = ExtResource("1_tyxdh")
@@ -9,7 +9,7 @@ script = ExtResource("1_tyxdh")
 [node name="Area2D" type="Area2D" parent="." unique_id=199523663]
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1607281976]
-position = Vector2(0, -5)
+position = Vector2(0, -4)
 texture = ExtResource("1_i88jb")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1769924929]
@@ -18,4 +18,4 @@ position = Vector2(0, -6)
 polygon = PackedVector2Array(3, 5, 0, 6, -3, 5, 0, 4)
 
 [node name="PlantSprite" type="Sprite2D" parent="." unique_id=196007174]
-offset = Vector2(0, -10)
+offset = Vector2(0, -9)
