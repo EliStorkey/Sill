@@ -11,6 +11,8 @@
 [ext_resource type="Resource" uid="uid://dhmpywj7y2cf" path="res://resources/spider_plant.tres" id="5_qurbw"]
 [ext_resource type="PackedScene" uid="uid://cvg7kv42a1y3f" path="res://scenes/pot_base.tscn" id="6_krm4r"]
 [ext_resource type="Resource" uid="uid://icxvdn6r2bg5" path="res://resources/aloe_vera.tres" id="7_vm68j"]
+[ext_resource type="AudioStream" uid="uid://b0kgtset8jdy2" path="res://assets/placepot.wav" id="8_rth7s"]
+[ext_resource type="AudioStream" uid="uid://cdkv7gs3rjhe6" path="res://assets/pickuppot.wav" id="9_ngfo8"]
 [ext_resource type="Texture2D" uid="uid://srej2lmfo01" path="res://assets/background.png" id="12_vm68j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vm68j"]
@@ -360,6 +362,8 @@ floor_layer = NodePath("../FloorLayer")
 pot_scene = ExtResource("6_krm4r")
 camera = NodePath("../Camera2D")
 available_plants = Array[ExtResource("4_6k8qy")]([ExtResource("5_qurbw"), ExtResource("5_evabm"), ExtResource("7_vm68j")])
+place_sfx = ExtResource("8_rth7s")
+pickup_sfx = ExtResource("9_ngfo8")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=727180336]
 offset = Vector2(0, -26)
@@ -371,6 +375,7 @@ tile_map_data = PackedByteArray("AAD+//z/AAAHAAAAAAD///z/AAAHAAAAAAAAAPz/AAAHAAA
 tile_set = SubResource("TileSet_qurbw")
 
 [node name="ObjectLayer" type="TileMapLayer" parent="." unique_id=679488341]
+visible = false
 z_index = 2
 y_sort_enabled = true
 tile_set = SubResource("TileSet_ngfo8")

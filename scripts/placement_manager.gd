@@ -4,6 +4,8 @@ extends Node2D
 @export var pot_scene: PackedScene
 @export var camera: Camera2D
 @export var available_plants: Array[PlantData] = [] # Drag your .tres files here
+@export var place_sfx: AudioStream
+@export var pickup_sfx: AudioStream
 
 var current_preview: Node2D = null
 var is_placing: bool = false
@@ -105,6 +107,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			final_pot.setup(available_plants[selected_plant_index])
 			
 			placed_pots[grid_coords] = final_pot
+			AudioManager.play_sfx(place_sfx)
 			just_placed_here = true 
 			queue_redraw() 
 			
@@ -112,7 +115,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		if placed_pots.has(grid_coords):
 			placed_pots[grid_coords].queue_free()
 			placed_pots.erase(grid_coords)
-			just_placed_here = false 
+			AudioManager.play_sfx(pickup_sfx)
+			just_placed_here = false
 			queue_redraw()
 
 func _draw() -> void:
